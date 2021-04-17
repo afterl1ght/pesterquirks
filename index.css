@@ -1,0 +1,36 @@
+body {
+  background-color: #121212;
+  color: #fff
+}
+
+h1 {
+  color: #fff
+}
+
+input.tinput {
+  background-color: #323232;
+  color: #fff;
+  left: 5px;
+  width: 45%;
+  height: 100px;
+  margin: auto;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.toutput {
+  background-color: #323232;
+  color: #fff;
+  left: 5px;
+  width: 45%;
+  height: 100px;
+  margin: auto;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+}
