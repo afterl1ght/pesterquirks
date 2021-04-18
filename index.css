@@ -1,114 +1,148 @@
 /*Keyframes*/
 /*cool opening animation*/
 @keyframes fade-in {
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		width: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /*Web Elements*/
 body {
-  background-color: #121212;
-  color: #fff;
-  font-family: "Lucida Console", "Courier New", monospace;
+	background-image: url("https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/res/bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #121212;
+	opacity: 0;
+	color: #fff;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-weight: 700;
+	
+	animation: .75s ease-out .5s 1 fade-in forwards;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
 }
 
 /*Probably the only header*/
 h1 {
-  color: #fff;
-  text-align: center;
+	color: #fff;
+	text-align: center;
+}
+
+#bg-overlay {
+	display: block;
+	position: fixed;
+  left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #141413;
+	opacity: .5;
+	width: 100vw;
+  height: 100vh;
+	z-index: 1;
 }
 
 /*div element hierarchy*/
 #block {
-  opacity: 0;
-  animation: .5s ease-out .5s 1 fade-in forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+	opacity: .95;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
 }
 
 /*unique form hierarchy*/
 form {
-  overflow: hidden;
-  background: #222222;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1;
-  margin: 0 auto;
-  padding: 10px 0;
-  width: 500px;
+	overflow: hidden;
+	background: #222222;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 500px;
+	z-index: 10;
 }
 
 /*character selection expander*/
 #charsel {
-  position: relative;
-  margin: auto;
-  background: #444;
-  max-width: 120px;
-  min-width: 120px;
-  padding: 10px 10px;
-  font-size: 12px;
-  transition: .25s;
-  border-radius: 5px;
-  user-select: none;
+	position: relative;
+	margin: auto;
+	background: #444;
+	max-width: 120px;
+	min-width: 120px;
+	padding: 10px 10px;
+	font-size: 12px;
+	transition: 0.25s;
+	border-radius: 5px;
+	user-select: none;
 }
 
 /*character selection expanded content*/
 #charselContent {
-  display: block;
-  position: absolute;
-  left: -50px;
-  right: -50px;
-  margin-top: 10px;
-  background-color: #111111;
-  opacity: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 5px 5px;
-  font-size: 16px;
-  
-  overflow: hidden;
-  
-  transition: opacity .2s;
-  user-select: none;
-  z-index: 1;
+	display: block;
+	position: absolute;
+	left: -50px;
+	right: -50px;
+	margin-top: 10px;
+	background-color: #111111;
+	opacity: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 5px 5px;
+	font-size: 16px;
+
+	overflow: hidden;
+
+	transition: opacity 0.2s;
+	user-select: none;
+	z-index: 1;
 }
 
 /*Character options*/
 .charOption a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
 /*hover events*/
 #charsel:hover {
-  background: #000000;
+	background: #000000;
 }
 
 #charsel:hover #charselContent {
-  opacity: 1;
+	opacity: 1;
 }
 
 .charOption:hover {
-  background: #1a1a1a;
+	background: #1a1a1a;
 }
 
-.tinput, .toutput {
-  resize: none;
-  overflow: auto;
+.generic-textbox {
+	resize: none;
+	overflow: auto;
 
-  background-color: #323232;
-  color: #fff;
-  width: 95%;
-  border: none;
-  border-radius: 5px;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-weight: 700;
+	background-color: #323232;
+	color: #fff;
+	width: 95%;
+	border: none;
+	border-radius: 5px;
 }
 /*form hierarchy end*/
 /*div hierarchy end*/
