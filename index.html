@@ -1,36 +1,41 @@
 <html>
-  <head>
-    <title>Pesterquirks</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!--Main structure-->
-    <div id="block">
-      <!--Input form-->
-      <form>
-        <!--Title-->
-        <h1>Pesterquirks</h1>
-        <div id="charsel">
-          <!--Character selection expander-->
-          Select Character
-          <div id="charselContent">
-            <div class="charOption"><a href="#">KARKAT</a></div>
-            <div class="charOption"><a href="#">JOHN</a></div>
-          </div>
-          
-          <!--Character list that'll expand upon hovering-->
-        </div>
-        
-        <br>
-        
-        <p id="selectedChar">SELECTED CHARACTER: KARKAT</p>
-        
-        <!--IO-->
-        <p>Input Dialogue</p>
-        <textarea rows="5" class="tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
-        <p>Output Dialogue</p>
-        <textarea rows="5" class="toutput" name="textoutput" readonly></textarea>
-      </form>
-    <div>
-  </body>
+
+<head>
+	<title>Pesterquirks</title>
+	<link rel="stylesheet" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div id="bg-overlay"></div>
+	<!--Main structure-->
+	<div id="block">
+		<!--Input form-->
+		<form>
+			<!--Title-->
+			<h1>Pesterquirks</h1>
+			<div id="charsel">
+				<!--Character selection expander-->
+				Select Character
+				<div id="charselContent">
+					<div class="charOption"><a href="#">KARKAT</a></div>
+					<div class="charOption"><a href="#">JOHN</a></div>
+				</div>
+
+				<!--Character list that'll expand upon hovering-->
+			</div>
+
+			<br>
+
+			<p id="selectedChar">SELECTED CHARACTER: KARKAT</p>
+
+			<!--IO-->
+			<p>Input Dialogue</p>
+			<textarea rows="5" class="generic-textbox tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
+			<p>Output Dialogue</p>
+			<textarea rows="5" class="generic-textbox toutput" name="textoutput" readonly></textarea>
+		</form>
+	</div>
+</body>
+
+</html>
