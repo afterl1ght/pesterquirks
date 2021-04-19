@@ -23,11 +23,12 @@ body {
 	color: #fff;
 	font-family: "Lucida Console", "Courier New", monospace;
 	font-weight: 700;
-	
-	animation: .75s ease-out .5s 1 fade-in forwards;
+
+	animation: 0.75s ease-out 0.5s 1 fade-in forwards;
 }
 
-body, html {
+body,
+html {
 	width: 100%;
 	height: 100%;
 }
@@ -41,22 +42,24 @@ h1 {
 #bg-overlay {
 	display: block;
 	position: fixed;
-  left: 0;
+	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
 	background: #141413;
-	opacity: .5;
-	width: 100vw;
-  height: 100vh;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
 	z-index: 1;
 }
 
 /*div element hierarchy*/
 #block {
-	opacity: .95;
+	opacity: 0.95;
 	display: flex;
 	position: absolute;
+	left: 0;
+	right: 0;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
