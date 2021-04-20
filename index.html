@@ -3,38 +3,43 @@
 <head>
 	<title>Pesterquirks</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="main.js"></script>
 	<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-	<div id="bg-overlay"></div>
-	<!--Main structure-->
-	<div id="block">
-		<!--Input form-->
-		<form>
-			<!--Title-->
-			<h1></h1>
-			<div id="charsel">
-				<!--Character selection expander-->
-				Select Character
-				<nav class="charselContent">
-					<div class="charOption"><a href="#">KARKAT</a></div>
-					<div class="charOption"><a href="#">JOHN</a></div>
-				</nav>
+	<div id="bg"></div>
+	<div class="appearify">
+		<div id="bg-overlay"></div>
+		<!--Main structure-->
+		<div id="block">
+			<!--Input form-->
+			<form>
+				<!--Title-->
+				<h1 class="retain-middle"></h1>
+				<button class="retain-middle charsel" onclick="javascript:void(0)">
+					<!--Character selection expander-->
+					<span class="text">Select Character</span>
+					<div class="containerOpener"></div>
+					<nav class="charselContent">
+						<div class="charOption"><a href="#">KARKAT</a></div>
+						<div class="charOption"><a href="#">JOHN</a></div>
+					</nav>
 
-				<!--Character list that'll expand upon hovering-->
-			</div>
+					<!--Character list that'll expand upon hovering-->
+				</button>
 
-			<br>
+				<br>
 
-			<p id="selectedChar">SELECTED CHARACTER: KARKAT</p>
+				<p class="unwrap retain-middle preview">PLEASE PROCEED YOUR HUMAN NONSENSE.</p>
 
-			<!--IO-->
-			<p>Input Dialogue</p>
-			<textarea rows="5" class="generic-textbox tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
-			<p>Output Dialogue</p>
-			<textarea rows="5" class="generic-textbox toutput" name="textoutput" readonly></textarea>
-		</form>
+				<!--IO-->
+				<p class="unwrap retain-middle">Input Dialogue</p>
+				<textarea rows="10" class="generic-textbox retain-middle tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
+				<p class="unwrap">Output Dialogue</p>
+				<textarea rows="10" class="generic-textbox retain-middle toutput" name="textoutput" readonly></textarea>
+			</form>
+		</div>
 	</div>
 </body>
 
