@@ -1,1 +1,1 @@
-rreplace /(?=((?:(?<!t)|^)r+(?=[aeiouy])))./gim cap
+replace /(?=((?:(?<!t)|^)r+(?=[aeiouy])))./gim cap
