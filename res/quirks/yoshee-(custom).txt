@@ -1,2 +1,2 @@
-rreplace /[aie]/gim $&$&
+replace /[aie]/gim $&$&
 cap
