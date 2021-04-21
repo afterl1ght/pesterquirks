@@ -1,19 +1,31 @@
-body = document.body;
-bclasslist = body.classList;
+//main.js
+var body = document.body;
+var bclasslist = body.classList;
 
 //Init
 //Add a class to pause cool animated entrance until everything is loaded.
-bclasslist.add("hold")
-
-//Functions
-function addListener(event, func) {
-	window.addEventListener(event, func);
-}
+bclasslist.add("hold");
 
 //Run function upon page load.
 function loaded() {
-	bclasslist.remove("hold")
+	bclasslist.remove("hold");
 }
 
+//Create a list of available characters.
+$.getJSON(
+	"https://api.github.com/repos/afterl1ght/pesterquirks/contents/res/quirks/",
+	loadAvailableQuirks
+).fail(() =>
+	$.getJSON(
+		"https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/available.json",
+		loadAvailableQuirks
+	).fail(() =>
+		alert(
+			"Unable to load list of characters at this time! Please try again later."
+		)
+	)
+);
+
 //Bind events
-addListener("load", loaded);
+$(window).on("load", loaded);
+$(".tinput").on("input", onInput);
