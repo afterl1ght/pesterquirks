@@ -1,3 +1,4 @@
+preview i don't mind whatsoever :d
 color 008282
 replace /[aie]/gim $&$&
 cap
