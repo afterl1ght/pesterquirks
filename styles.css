@@ -83,7 +83,7 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	background-image: url("https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/res/bg.png");
+	background-image: url("res/bg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -96,7 +96,7 @@ h1 {
 	left: 0;
 	right: 0;
 	height: 1em;
-	background: url(https://github.com/afterl1ght/pesterquirks/blob/main/res/pesterquirksLogo.png?raw=true);
+	background: url("res/pesterquirksLogo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
