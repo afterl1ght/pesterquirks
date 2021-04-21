@@ -34,30 +34,28 @@ function notifyCopy() {
 $.getJSON(
 	"https://api.github.com/repos/afterl1ght/pesterquirks/contents/res/quirks/",
 	loadAvailableQuirks
-)
-	.fail(() =>
-		$.getJSON(
-			"available.json",
-			loadAvailableQuirks
-		).fail(() =>
-			alert(
-				"Unable to load list of characters at this time! Please try again later."
-			)
+).fail(() =>
+	$.getJSON(
+		"available.json",
+		loadAvailableQuirks
+	).fail(() =>
+		alert(
+			"Unable to load list of characters at this time! Please try again later."
 		)
 	)
-	.always(() => {
-		//Bind events
-		$(window).on("load", loaded);
-		$(document).ready(() => $(".tinput").on("input", onInput));
-		$("#copy").click(() => {
-			$(".toutput").select();
-			document.getElementById("textoutput").setSelectionRange(0, 41300);
-			document.execCommand("copy");
-			window.getSelection().removeAllRanges();
-			document.getSelection().empty();
-			if (!isNotifyingUser) {
-				isNotifyingUser = true;
-				notifyCopy();
-			}
-		});
-	});
+);
+
+//Bind events
+$(window).on("load", loaded);
+$(document).ready(() => $(".tinput").on("input", onInput));
+$("#copy").click(() => {
+	$(".toutput").select();
+	document.getElementById("textoutput").setSelectionRange(0, 41300);
+	document.execCommand("copy");
+	window.getSelection().removeAllRanges();
+	document.getSelection().empty();
+	if (!isNotifyingUser) {
+		isNotifyingUser = true;
+		notifyCopy();
+	}
+});
