@@ -1,2 +1,3 @@
+preview trees are really tall!
 color a15000
 replace /(?=((?:(?<!t)|^)r+(?=[aeiouy])))./gim cap
