@@ -64,9 +64,9 @@ body {
 
 /*Default font*/
 body,
-.text,
-.generic-textbox,
-.charselContent {
+#block *,
+#block *:before,
+#block *:after {
 	font-family: "Lucida Console", "Courier New", monospace;
 	font-weight: 700;
 }
@@ -176,7 +176,6 @@ form {
 	max-width: 175px;
 	min-width: 175px;
 	padding: 10px 10px;
-	border-style: none;
 	text-align: center;
 	font-size: 12px;
 	color: #fff;
@@ -255,7 +254,7 @@ form {
 }
 
 /*hover events*/
-.charsel:hover {
+.charsel:hover, .copy:hover {
 	background: #404040;
 }
 
@@ -287,6 +286,18 @@ form {
 	padding: 5px 5px;
 	border: none;
 	border-radius: 5px;
+}
+
+.copy {
+	background: #323232;
+	transition: 0.25s;
+	border: 2px solid #121212;
+	border-radius: 5px 5px;
+	color: #fff;
+	width: 150px;
+	height: 40px;
+	user-select: none;
+	cursor: pointer;
 }
 /*form hierarchy end*/
 /*div hierarchy end*/
