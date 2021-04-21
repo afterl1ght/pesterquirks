@@ -136,19 +136,9 @@ function parseQuirk(input, cmds) {
 	return input;
 }
 
-/*Runs everytime the user types sth in the tbox*/
-function onInput() {
-	/*Process input and commands*/
-	var input = $(".tinput").val();
-
-	var result = parseQuirk(input, cmds);
-
-	$(".toutput").text(result);
-}
-
 //Convert string to regex
 function toRegex(str) {
 	var searchfor = str.match(/(?<!\\)(?<=\/)(.*?)+(?=\/)/) || [""];
-	var flags = str.replace("/" + searchfor[0] + "/", "");
+	var flags = str.replace(`/${searchfor[0]}/`, "");
 	return new RegExp(searchfor[0], flags);
 }
