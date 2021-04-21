@@ -47,15 +47,17 @@ $.getJSON(
 
 //Bind events
 $(window).on("load", loaded);
-$(document).ready(() => $(".tinput").on("input", onInput));
-$("#copy").click(() => {
-	$(".toutput").select();
-	document.getElementById("textoutput").setSelectionRange(0, 41300);
-	document.execCommand("copy");
-	window.getSelection().removeAllRanges();
-	document.getSelection().empty();
-	if (!isNotifyingUser) {
-		isNotifyingUser = true;
-		notifyCopy();
-	}
+$(document).ready(() => {
+	$(".tinput").on("input", onInput);
+	$("#copy").click(() => {
+		$(".toutput").select();
+		document.getElementById("textoutput").setSelectionRange(0, 41300);
+		document.execCommand("copy");
+		window.getSelection().removeAllRanges();
+		document.getSelection().empty();
+		if (!isNotifyingUser) {
+			isNotifyingUser = true;
+			notifyCopy();
+		}
+	});
 });
