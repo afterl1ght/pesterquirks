@@ -3,8 +3,10 @@
 <head>
 	<title>Pesterquirks</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="js\main.js"></script>
-	<link rel="stylesheet" href="index.css">
+	<script type="text\javascript" src="js\quirk.js"></script>
+	<script type="text\javascript" src="js\main.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 
 <body>
@@ -17,13 +19,10 @@
 			<form>
 				<!--Title-->
 				<h1 class="retain-middle"></h1>
-				<button class="retain-middle charsel" onclick="javascript:void(0)">
+				<button type="button" class="retain-middle charsel">
 					<!--Character selection expander-->
 					<span class="text">Select Character</span>
-					<div class="containerOpener"></div>
 					<nav class="charselContent">
-						<div class="charOption"><a href="#">KARKAT</a></div>
-						<div class="charOption"><a href="#">JOHN</a></div>
 					</nav>
 
 					<!--Character list that'll expand upon hovering-->
@@ -31,13 +30,13 @@
 
 				<br>
 
-				<p class="unwrap retain-middle preview">PLEASE PROCEED YOUR HUMAN NONSENSE.</p>
+				<p class="unwrap retain-middle preview">I'm just a preview!</p>
 
 				<!--IO-->
 				<p class="unwrap retain-middle">Input Dialogue</p>
-				<textarea rows="10" class="generic-textbox retain-middle tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
+				<textarea rows="6" class="generic-textbox retain-middle tinput" name="textinput" autofocus maxlength="41300"></textarea><br><br>
 				<p class="unwrap">Output Dialogue</p>
-				<textarea rows="10" class="generic-textbox retain-middle toutput" name="textoutput" readonly></textarea>
+				<textarea rows="6" class="generic-textbox retain-middle toutput" name="textoutput" readonly></textarea>
 			</form>
 		</div>
 	</div>
