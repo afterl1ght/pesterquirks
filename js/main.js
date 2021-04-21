@@ -11,13 +11,21 @@ function loaded() {
 	bclasslist.remove("hold");
 }
 
+//Runs everytime the user types sth in the tbox
+function onInput() {
+	/*Process input and commands*/
+	var input = $(".tinput").val();
+	var result = parseQuirk(input, cmds);
+	$(".toutput").text(result);
+}
+
 //Create a list of available characters.
 $.getJSON(
 	"https://api.github.com/repos/afterl1ght/pesterquirks/contents/res/quirks/",
 	loadAvailableQuirks
 ).fail(() =>
 	$.getJSON(
-		"available.json",
+		"https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/available.json",
 		loadAvailableQuirks
 	).fail(() =>
 		alert(
@@ -28,4 +36,4 @@ $.getJSON(
 
 //Bind events
 $(window).on("load", loaded);
-$(".tinput").on("input", onInput);
+$(document).ready(() => $(".tinput").on("input", onInput));
