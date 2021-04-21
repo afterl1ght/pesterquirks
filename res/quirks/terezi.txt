@@ -1,0 +1,4 @@
+replace /a/gi 4
+replace /i/gi 1
+replace /e/gi 3
+cap
