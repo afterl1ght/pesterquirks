@@ -70,7 +70,7 @@ function reformat(pathName) {
 
 function addOptions(_, content) {
 	$.get(
-		`https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/res/quirks/${content.name}`,
+		`res/quirks/${content.name}`,
 		function (v) {
 			quirks[content.name] = v;
 			var pathName = reformat(content.name);
