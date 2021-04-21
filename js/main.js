@@ -17,7 +17,7 @@ $.getJSON(
 	loadAvailableQuirks
 ).fail(() =>
 	$.getJSON(
-		"/available.json",
+		"available.json",
 		loadAvailableQuirks
 	).fail(() =>
 		alert(
