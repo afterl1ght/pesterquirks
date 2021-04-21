@@ -17,7 +17,7 @@ $.getJSON(
 	loadAvailableQuirks
 ).fail(() =>
 	$.getJSON(
-		"https://raw.githubusercontent.com/afterl1ght/pesterquirks/main/available.json",
+		"/available.json",
 		loadAvailableQuirks
 	).fail(() =>
 		alert(
