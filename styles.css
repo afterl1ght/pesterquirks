@@ -254,7 +254,8 @@ form {
 }
 
 /*hover events*/
-.charsel:hover, .copy:hover {
+.charsel:hover,
+.copy:hover {
 	background: #404040;
 }
 
@@ -283,6 +284,7 @@ form {
 	background-color: #323232;
 	color: #fff;
 	width: 95%;
+	height: 20vh;
 	padding: 5px 5px;
 	border: none;
 	border-radius: 5px;
@@ -290,7 +292,7 @@ form {
 
 .copy {
 	background: #323232;
-	transition: 0.25s;
+	transition: opacity 0.25s;
 	border: 2px solid #121212;
 	border-radius: 5px 5px;
 	color: #fff;
@@ -299,5 +301,13 @@ form {
 	user-select: none;
 	cursor: pointer;
 }
+
+/*Class for copy button to remain visible when overscaled*/
+.button-copy-lock {
+	position: fixed;
+	margin: 0 175px 10px -75px;
+	bottom: 0;
+}
+
 /*form hierarchy end*/
 /*div hierarchy end*/
