@@ -1,0 +1,3 @@
+preview oh hey, what you're doing?
+color a1a100
+replace o 0
