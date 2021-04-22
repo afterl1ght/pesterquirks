@@ -19,6 +19,25 @@ function onInput() {
 	$(".toutput").text(result);
 }
 
+//Lock copy button's position if the webpage is overscaled which hinders the button
+function lockButtonPosition() {
+	var lock = "button-copy-lock";
+	$(".copy").removeClass(lock);
+
+	var buttonHeight = $(".copy").outerHeight();
+	var topToButtonBottom = $(".copy").offset().top + buttonHeight;
+	var formHeight = $("form").outerHeight();
+
+	/*If the resulting subtraction is lesser than button's height, the button may have been hidden by the scaling*/
+	if (formHeight - topToButtonBottom < buttonHeight) {
+		//Locks the button by defining premade .button-copy-lock class on it
+		$(".copy").addClass(lock);
+	} else {
+		$(".copy").removeClass(lock);
+	}
+	console.log(formHeight - topToButtonBottom < buttonHeight);
+}
+
 //Check if button is still in "Copied!" state
 var isNotifyingUser = false;
 //Runs everytime the user clicks the copy button
@@ -48,6 +67,7 @@ $.getJSON(
 //Bind events
 $(window).on("load", loaded);
 $(document).ready(() => {
+	//Main events
 	$(".tinput").on("input", onInput);
 	$("#copy").click(() => {
 		$(".toutput").select();
@@ -60,4 +80,9 @@ $(document).ready(() => {
 			notifyCopy();
 		}
 	});
+
+	//Side UI-related events
+	//Lock button when orientation changes, albeit uncomfortable on mobile devices with scaled resolution. They would have to turn on Desktop view for that.
+	lockButtonPosition(); //Trigger this first in case
+	$(window).on("resize orientationChange", lockButtonPosition);
 });
