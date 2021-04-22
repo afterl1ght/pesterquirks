@@ -1,5 +1,5 @@
 color 008282
-replace /a/gi 4
-replace /i/gi 1
-replace /e/gi 3
+replace a 4
+replace i 1
+replace e 3
 cap
