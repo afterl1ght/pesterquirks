@@ -35,7 +35,6 @@ function lockButtonPosition() {
 	} else {
 		$(".copy").removeClass(lock);
 	}
-	console.log(formHeight - topToButtonBottom < buttonHeight);
 }
 
 //Check if button is still in "Copied!" state
