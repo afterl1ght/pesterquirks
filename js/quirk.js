@@ -138,7 +138,14 @@ function parseQuirk(input, cmds) {
 
 //Convert string to regex
 function toRegex(str) {
-	var searchfor = str.match(/(?<!\\)(?<=\/)(.*?)+(?=\/)/) || [""];
+	var searchfor = str.match(/(?<!\\)(?<=\/)(.*?)+(?=\/)/) || [];
+	if (searchfor.length <= 0) {
+		if (str.length > 0) {
+			return new RegExp(str, "gim");
+		} else {
+			return /./g;
+		}
+	}
 	var flags = str.replace(`/${searchfor[0]}/`, "");
 	return new RegExp(searchfor[0], flags);
 }
