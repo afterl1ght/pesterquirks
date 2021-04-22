@@ -1,0 +1,6 @@
+preview this shouldn't cost too much.
+color a1a100
+replace i $&$&
+replace /to[o]?/gi two
+replace s 2
+replace ' 
