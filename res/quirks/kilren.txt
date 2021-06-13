@@ -1,0 +1,3 @@
+previee I am Kilren, I take your children
+replace /[k]/gi kK
+replace /[r]/gi rR
