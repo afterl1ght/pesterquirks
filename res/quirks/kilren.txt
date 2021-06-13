@@ -1,3 +1,4 @@
-previee I am Kilren, I take your children
+preview I am Kilren, I take your children
+color ffffff
 replace /[k]/gi kK
 replace /[r]/gi rR
